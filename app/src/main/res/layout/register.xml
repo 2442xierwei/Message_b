@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#fafafa">
+
+        <Button
+            android:id="@+id/rg_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/back" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/rg_userWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:textColorHint="#ffc107">
+
+            <EditText
+                android:singleLine="true"
+                android:id="@+id/rg_user"
+                android:layout_width="320dp"
+                android:layout_height="48dp"
+                android:hint="请输入账号"
+                android:textColorHint="#ffc107" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/rg_passWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignStart="@id/rg_userWrapper"
+            android:layout_below="@id/rg_userWrapper"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textColorHint="#ffc107"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:singleLine="true"
+                android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:id="@+id/rg_pass"
+                android:layout_width="320dp"
+                android:layout_height="48dp"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:textColorHint="#ffc107" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/rg_repassWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignStart="@id/rg_passWrapper"
+            android:layout_below="@id/rg_passWrapper"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textColorHint="#ffc107"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:singleLine="true"
+                android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:id="@+id/rg_repass"
+                android:layout_width="320dp"
+                android:layout_height="48dp"
+                android:layout_alignStart="@id/rg_pass"
+                android:layout_below="@id/rg_pass"
+                android:hint="请再次输入密码"
+                android:inputType="textPassword"
+                android:textColorHint="#ffc107" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/rg_bt"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/rg_repassWrapper"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="#ffc107"
+            android:text="注册"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+</LinearLayout>
